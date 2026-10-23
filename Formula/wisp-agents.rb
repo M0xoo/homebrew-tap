@@ -3,13 +3,13 @@
 #   brew tap m0xoo/tap
 #   brew install wisp-agents
 #
-# Bump `url` and `sha256` with each npm release. The sha256 is that of the npm tarball:
-#   curl -fsSL <url> | shasum -a 256
+# The release workflow (.github/workflows/release.yml) copies this file to the tap with `url` and
+# `sha256` set to the new npm tarball, so edit it here, not in the tap.
 class WispAgents < Formula
   desc "Launch coding agents, skip the transcript, read the presentation"
   homepage "https://trywisp.dev/"
-  url "https://registry.npmjs.org/wisp-agents/-/wisp-agents-0.33.0.tgz"
-  sha256 "866f1199f208dc56e99ad6d481031b25af548743bb3a2d84df225748bbabbeaa"
+  url "https://registry.npmjs.org/wisp-agents/-/wisp-agents-0.37.0.tgz"
+  sha256 "c1e00276c87d6a72086bda61ed48adb380a4d2832aa4f33401a9546737aa505b"
   license "MIT"
 
   depends_on "node"
@@ -29,7 +29,7 @@ class WispAgents < Formula
     <<~EOS
       The desktop app is not included with the Homebrew install; `wisp` opens in your
       browser at http://localhost:4477.
-      For the desktop app, install from npm instead: npm install -g wisp-agents
+      For the desktop app, download it from https://trywisp.dev/#download
     EOS
   end
 
